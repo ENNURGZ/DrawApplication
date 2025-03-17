@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             panelDrawing = new Panel();
-            OperationsGroup = new GroupBox();
-            ShapePosition = new Label();
             Cizimİslemleri = new GroupBox();
             btnCircle = new Button();
             btnRectangle = new Button();
@@ -53,11 +51,13 @@
             Dosyaİslemleri = new GroupBox();
             btnSaveFile = new Button();
             btnOpenFile = new Button();
-            OperationsGroup.SuspendLayout();
+            OperationsGroup = new GroupBox();
+            ShapePosition = new Label();
             Cizimİslemleri.SuspendLayout();
             Renkİslemleri.SuspendLayout();
             SekilIslemleri.SuspendLayout();
             Dosyaİslemleri.SuspendLayout();
+            OperationsGroup.SuspendLayout();
             SuspendLayout();
             // 
             // panelDrawing
@@ -69,30 +69,12 @@
             panelDrawing.Name = "panelDrawing";
             panelDrawing.RightToLeft = RightToLeft.Yes;
             panelDrawing.Size = new Size(1404, 792);
-            panelDrawing.TabIndex = 0;
-            // 
-            // OperationsGroup
-            // 
-            OperationsGroup.BackColor = SystemColors.Control;
-            OperationsGroup.Controls.Add(ShapePosition);
-            OperationsGroup.Controls.Add(Cizimİslemleri);
-            OperationsGroup.Controls.Add(Renkİslemleri);
-            OperationsGroup.Controls.Add(SekilIslemleri);
-            OperationsGroup.Controls.Add(Dosyaİslemleri);
-            OperationsGroup.Dock = DockStyle.Right;
-            OperationsGroup.Location = new Point(1138, 0);
-            OperationsGroup.Name = "OperationsGroup";
-            OperationsGroup.Size = new Size(266, 792);
-            OperationsGroup.TabIndex = 0;
-            OperationsGroup.TabStop = false;
-            // 
-            // ShapePosition
-            // 
-            ShapePosition.AutoSize = true;
-            ShapePosition.Location = new Point(33, 678);
-            ShapePosition.Name = "ShapePosition";
-            ShapePosition.Size = new Size(0, 20);
-            ShapePosition.TabIndex = 2;
+            panelDrawing.TabIndex = 1;
+            panelDrawing.Paint += panelDrawing_Paint;
+            panelDrawing.MouseClick += panelDrawing_MouseClick;
+            panelDrawing.MouseDown += panelDrawing_MouseDown;
+            panelDrawing.MouseMove += panelDrawing_MouseMove;
+            panelDrawing.MouseUp += panelDrawing_MouseUp;
             // 
             // Cizimİslemleri
             // 
@@ -100,7 +82,7 @@
             Cizimİslemleri.Controls.Add(btnRectangle);
             Cizimİslemleri.Controls.Add(btnTriangle);
             Cizimİslemleri.Controls.Add(btnHexagon);
-            Cizimİslemleri.Location = new Point(9, 12);
+            Cizimİslemleri.Location = new Point(12, 12);
             Cizimİslemleri.Name = "Cizimİslemleri";
             Cizimİslemleri.Size = new Size(245, 172);
             Cizimİslemleri.TabIndex = 0;
@@ -115,6 +97,7 @@
             btnCircle.Size = new Size(68, 60);
             btnCircle.TabIndex = 3;
             btnCircle.UseVisualStyleBackColor = true;
+            btnCircle.Click += btnCircle_Click;
             // 
             // btnRectangle
             // 
@@ -123,6 +106,7 @@
             btnRectangle.Name = "btnRectangle";
             btnRectangle.Size = new Size(68, 60);
             btnRectangle.TabIndex = 4;
+            btnRectangle.Click += btnRectangle_Click;
             // 
             // btnTriangle
             // 
@@ -132,6 +116,7 @@
             btnTriangle.Size = new Size(68, 60);
             btnTriangle.TabIndex = 1;
             btnTriangle.UseVisualStyleBackColor = true;
+            btnTriangle.Click += btnTriangle_Click;
             // 
             // btnHexagon
             // 
@@ -141,6 +126,7 @@
             btnHexagon.Size = new Size(68, 60);
             btnHexagon.TabIndex = 0;
             btnHexagon.UseVisualStyleBackColor = true;
+            btnHexagon.Click += btnHexagon_Click;
             // 
             // Renkİslemleri
             // 
@@ -153,7 +139,7 @@
             Renkİslemleri.Controls.Add(btnGreen);
             Renkİslemleri.Controls.Add(btnBlue);
             Renkİslemleri.Controls.Add(btnRed);
-            Renkİslemleri.Location = new Point(11, 197);
+            Renkİslemleri.Location = new Point(21, 190);
             Renkİslemleri.Name = "Renkİslemleri";
             Renkİslemleri.Size = new Size(236, 205);
             Renkİslemleri.TabIndex = 1;
@@ -168,6 +154,7 @@
             btnOrange.Size = new Size(62, 51);
             btnOrange.TabIndex = 1;
             btnOrange.UseVisualStyleBackColor = false;
+            btnOrange.Click += btnOrange_Click;
             // 
             // btnBlack
             // 
@@ -177,6 +164,7 @@
             btnBlack.Size = new Size(62, 51);
             btnBlack.TabIndex = 2;
             btnBlack.UseVisualStyleBackColor = false;
+            btnBlack.Click += btnBlack_Click;
             // 
             // btnYellow
             // 
@@ -187,6 +175,7 @@
             btnYellow.Size = new Size(62, 51);
             btnYellow.TabIndex = 3;
             btnYellow.UseVisualStyleBackColor = false;
+            btnYellow.Click += btnYellow_Click;
             // 
             // btnPurple
             // 
@@ -196,6 +185,7 @@
             btnPurple.Size = new Size(62, 51);
             btnPurple.TabIndex = 4;
             btnPurple.UseVisualStyleBackColor = false;
+            btnPurple.Click += btnPurple_Click;
             // 
             // btnBrown
             // 
@@ -205,6 +195,7 @@
             btnBrown.Size = new Size(62, 51);
             btnBrown.TabIndex = 5;
             btnBrown.UseVisualStyleBackColor = false;
+            btnBrown.Click += btnBrown_Click;
             // 
             // btnWhite
             // 
@@ -214,6 +205,7 @@
             btnWhite.Size = new Size(62, 51);
             btnWhite.TabIndex = 6;
             btnWhite.UseVisualStyleBackColor = false;
+            btnWhite.Click += btnWhite_Click;
             // 
             // btnGreen
             // 
@@ -223,6 +215,7 @@
             btnGreen.Size = new Size(62, 51);
             btnGreen.TabIndex = 2;
             btnGreen.UseVisualStyleBackColor = false;
+            btnGreen.Click += btnGreen_Click;
             // 
             // btnBlue
             // 
@@ -232,6 +225,7 @@
             btnBlue.Size = new Size(62, 51);
             btnBlue.TabIndex = 1;
             btnBlue.UseVisualStyleBackColor = false;
+            btnBlue.Click += btnBlue_Click;
             // 
             // btnRed
             // 
@@ -241,13 +235,14 @@
             btnRed.Size = new Size(62, 51);
             btnRed.TabIndex = 0;
             btnRed.UseVisualStyleBackColor = false;
+            btnRed.Click += btnRed_Click;
             // 
             // SekilIslemleri
             // 
             SekilIslemleri.Controls.Add(btnSelect);
             SekilIslemleri.Controls.Add(btnClean);
             SekilIslemleri.Controls.Add(btnDelete);
-            SekilIslemleri.Location = new Point(11, 408);
+            SekilIslemleri.Location = new Point(21, 413);
             SekilIslemleri.Name = "SekilIslemleri";
             SekilIslemleri.Size = new Size(236, 125);
             SekilIslemleri.TabIndex = 1;
@@ -262,6 +257,7 @@
             btnSelect.Size = new Size(62, 70);
             btnSelect.TabIndex = 10;
             btnSelect.UseVisualStyleBackColor = true;
+            btnSelect.Click += btnSelect_Click;
             // 
             // btnClean
             // 
@@ -271,6 +267,7 @@
             btnClean.Size = new Size(62, 70);
             btnClean.TabIndex = 9;
             btnClean.UseVisualStyleBackColor = true;
+            btnClean.Click += btnClean_Click;
             // 
             // btnDelete
             // 
@@ -280,12 +277,13 @@
             btnDelete.Size = new Size(62, 70);
             btnDelete.TabIndex = 8;
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // Dosyaİslemleri
             // 
             Dosyaİslemleri.Controls.Add(btnSaveFile);
             Dosyaİslemleri.Controls.Add(btnOpenFile);
-            Dosyaİslemleri.Location = new Point(11, 550);
+            Dosyaİslemleri.Location = new Point(21, 544);
             Dosyaİslemleri.Name = "Dosyaİslemleri";
             Dosyaİslemleri.Size = new Size(236, 125);
             Dosyaİslemleri.TabIndex = 1;
@@ -300,6 +298,7 @@
             btnSaveFile.Size = new Size(76, 60);
             btnSaveFile.TabIndex = 10;
             btnSaveFile.UseVisualStyleBackColor = true;
+            btnSaveFile.Click += btnSaveFile_Click;
             // 
             // btnOpenFile
             // 
@@ -309,6 +308,30 @@
             btnOpenFile.Size = new Size(73, 60);
             btnOpenFile.TabIndex = 11;
             btnOpenFile.UseVisualStyleBackColor = true;
+            btnOpenFile.Click += btnOpenFile_Click;
+            // 
+            // OperationsGroup
+            // 
+            OperationsGroup.Controls.Add(ShapePosition);
+            OperationsGroup.Controls.Add(Dosyaİslemleri);
+            OperationsGroup.Controls.Add(Cizimİslemleri);
+            OperationsGroup.Controls.Add(SekilIslemleri);
+            OperationsGroup.Controls.Add(Renkİslemleri);
+            OperationsGroup.Dock = DockStyle.Right;
+            OperationsGroup.Location = new Point(1135, 0);
+            OperationsGroup.Name = "OperationsGroup";
+            OperationsGroup.Size = new Size(269, 792);
+            OperationsGroup.TabIndex = 2;
+            OperationsGroup.TabStop = false;
+            // 
+            // ShapePosition
+            // 
+            ShapePosition.AutoSize = true;
+            ShapePosition.Location = new Point(43, 695);
+            ShapePosition.Name = "ShapePosition";
+            ShapePosition.Size = new Size(50, 20);
+            ShapePosition.TabIndex = 2;
+            ShapePosition.Text = "label1";
             // 
             // DrawCase
             // 
@@ -318,22 +341,21 @@
             Controls.Add(OperationsGroup);
             Controls.Add(panelDrawing);
             Name = "DrawCase";
-            StartPosition = FormStartPosition.Manual;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "DrawCase";
             WindowState = FormWindowState.Maximized;
-            OperationsGroup.ResumeLayout(false);
-            OperationsGroup.PerformLayout();
             Cizimİslemleri.ResumeLayout(false);
             Renkİslemleri.ResumeLayout(false);
             SekilIslemleri.ResumeLayout(false);
             Dosyaİslemleri.ResumeLayout(false);
+            OperationsGroup.ResumeLayout(false);
+            OperationsGroup.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panelDrawing;
-        private GroupBox OperationsGroup;
         private GroupBox Cizimİslemleri;
         private GroupBox Renkİslemleri;
         private GroupBox SekilIslemleri;
@@ -356,6 +378,7 @@
         private Button btnDelete;
         private Button btnSaveFile;
         private Button btnOpenFile;
+        private GroupBox OperationsGroup;
         private Label ShapePosition;
     }
 }
