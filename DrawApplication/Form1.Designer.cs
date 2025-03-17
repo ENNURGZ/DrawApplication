@@ -109,7 +109,7 @@
             // 
             // btnCircle
             // 
-            btnCircle.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_025737;
+            btnCircle.Image = Properties.Resources._4;
             btnCircle.Location = new Point(131, 26);
             btnCircle.Name = "btnCircle";
             btnCircle.Size = new Size(68, 60);
@@ -118,16 +118,15 @@
             // 
             // btnRectangle
             // 
-            btnRectangle.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_031040;
+            btnRectangle.Image = Properties.Resources._5;
             btnRectangle.Location = new Point(41, 26);
             btnRectangle.Name = "btnRectangle";
             btnRectangle.Size = new Size(68, 60);
-            btnRectangle.TabIndex = 2;
-            btnRectangle.UseVisualStyleBackColor = true;
+            btnRectangle.TabIndex = 4;
             // 
             // btnTriangle
             // 
-            btnTriangle.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_02536;
+            btnTriangle.Image = Properties.Resources._2;
             btnTriangle.Location = new Point(41, 106);
             btnTriangle.Name = "btnTriangle";
             btnTriangle.Size = new Size(68, 60);
@@ -136,7 +135,7 @@
             // 
             // btnHexagon
             // 
-            btnHexagon.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_0257361;
+            btnHexagon.Image = Properties.Resources._3;
             btnHexagon.Location = new Point(131, 106);
             btnHexagon.Name = "btnHexagon";
             btnHexagon.Size = new Size(68, 60);
@@ -257,7 +256,7 @@
             // 
             // btnSelect
             // 
-            btnSelect.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_031627;
+            btnSelect.Image = Properties.Resources._6;
             btnSelect.Location = new Point(22, 26);
             btnSelect.Name = "btnSelect";
             btnSelect.Size = new Size(62, 70);
@@ -266,7 +265,7 @@
             // 
             // btnClean
             // 
-            btnClean.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_031641;
+            btnClean.Image = Properties.Resources._8;
             btnClean.Location = new Point(158, 26);
             btnClean.Name = "btnClean";
             btnClean.Size = new Size(62, 70);
@@ -275,7 +274,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_031632;
+            btnDelete.Image = Properties.Resources._7;
             btnDelete.Location = new Point(90, 26);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(62, 70);
@@ -295,7 +294,7 @@
             // 
             // btnSaveFile
             // 
-            btnSaveFile.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_031653;
+            btnSaveFile.Image = Properties.Resources._10;
             btnSaveFile.Location = new Point(39, 42);
             btnSaveFile.Name = "btnSaveFile";
             btnSaveFile.Size = new Size(76, 60);
@@ -304,7 +303,7 @@
             // 
             // btnOpenFile
             // 
-            btnOpenFile.Image = Properties.Resources.Ekran_görüntüsü_2025_03_17_031646;
+            btnOpenFile.Image = Properties.Resources._9;
             btnOpenFile.Location = new Point(142, 42);
             btnOpenFile.Name = "btnOpenFile";
             btnOpenFile.Size = new Size(73, 60);
