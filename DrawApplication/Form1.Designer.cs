@@ -89,7 +89,7 @@
             // ShapePosition
             // 
             ShapePosition.AutoSize = true;
-            ShapePosition.Location = new Point(21, 690);
+            ShapePosition.Location = new Point(33, 678);
             ShapePosition.Name = "ShapePosition";
             ShapePosition.Size = new Size(0, 20);
             ShapePosition.TabIndex = 2;
