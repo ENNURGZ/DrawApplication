@@ -329,9 +329,8 @@
             ShapePosition.AutoSize = true;
             ShapePosition.Location = new Point(43, 695);
             ShapePosition.Name = "ShapePosition";
-            ShapePosition.Size = new Size(50, 20);
+            ShapePosition.Size = new Size(0, 20);
             ShapePosition.TabIndex = 2;
-            ShapePosition.Text = "label1";
             // 
             // DrawCase
             // 
