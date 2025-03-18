@@ -418,8 +418,7 @@ namespace DrawApplication
 
             List<Button> buttons = new List<Button>
             {
-                btnRectangle, btnCircle, btnTriangle, btnHexagon, 
-                btnRed, btnBlue, btnGreen, btnOrange, btnBlack, btnYellow, btnPurple, btnBrown, btnWhite 
+                btnRectangle, btnCircle, btnTriangle, btnHexagon 
             };
 
             if (isSelectMode)
