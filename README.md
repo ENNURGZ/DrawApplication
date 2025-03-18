@@ -7,6 +7,13 @@ OOP'nin tüm temel prensiplerini kullandım.
 -  Kalıtım, Shape sınıfından türetilen alt sınıflarla gerçekleştirdim.
 -  Çok biçimlilik, her şeklin Draw() metodunu farklı şekilde implemente etmesiyle sağladım.
 -  Kapsülleme, DrawingManager ve FileManager sınıflarında verileri dış erişime kapattım.
+## Case Çalışması Video
+https://www.youtube.com/watch?v=2ieEkcsSy7U
+
+## Case Çalışmasına Benzer Çalışmam
+https://github.com/ENNURGZ/carpismaDenetimi
+
+
 
 # Dosya Yapısı
 
