@@ -2,7 +2,6 @@
 
 Proje, Nesneye Dayalı Programlama prensiplerini (Soyutlama, Kalıtım, Çok biçimlilik, Kapsülleme) etkin bir şekilde kullandığım Windows Forms ile geliştirdiğim çizim uygulaması. 
 Dört farklı şekil (Dikdörtgen, Daire, Üçgen, Altıgen) seçip çizim alanına ekleyebilir, şekilleri taşıyabilir, rengini değiştirebilir, silebilir ve çizim bir dosyaya kaydedip tekrar açılabilir.
-OOP'nin tüm temel prensiplerini kullandım. 
 - Soyutlama, Shape sınıfı ile tüm şekillerin ortak özelliklerini kapsayarak sağladım.
 -  Kalıtım, Shape sınıfından türetilen alt sınıflarla gerçekleştirdim.
 -  Çok biçimlilik, her şeklin Draw() metodunu farklı şekilde implemente etmesiyle sağladım.
