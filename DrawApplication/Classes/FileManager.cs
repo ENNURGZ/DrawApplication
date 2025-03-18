@@ -8,31 +8,30 @@ namespace DrawApplication.Classes
 {
     public class FileManager
     {
-        public static void SaveFile(string filePath,List<Shape>shapes)
+        public static void SaveFile(string filePath, List<Shape> shapes)
         {
-            using (StreamWriter sw=new  StreamWriter(filePath))
+            using (StreamWriter sw = new StreamWriter(filePath))
             {
-                foreach(var shape in shapes)
+                foreach (var shape in shapes)
                 {
-                    sw.Write($"{shape.GetType().Name},{shape.StartPoint.X},{shape.StartPoint.Y}," +
-                     $"{shape.Dimensions.Width},{shape.Dimensions.Height},{shape.ShapeColor.ToArgb()}");
+                    sw.WriteLine($"{shape.GetType().Name},{shape.StartPoint.X},{shape.StartPoint.Y}," +
+                                 $"{shape.Dimensions.Width},{shape.Dimensions.Height},{shape.ShapeColor.ToArgb()}");
                 }
             }
         }
 
-
-        public static List<Shape>OpenFile(string filePath)
+        public static List<Shape> OpenFile(string filePath)
         {
             List<Shape> shapes = new List<Shape>();
-            using (StreamReader sr =new StreamReader(filePath))
+            using (StreamReader sr = new StreamReader(filePath))
             {
-                string? line;                                                    //satır           
-                while((line = sr.ReadLine()) != null)                           //satır satır okuma
+                string? line;                                       //satır
+                while ((line = sr.ReadLine()) != null)              //satır satır okuma
                 {
-                    string[] parts = line.Split(' ');
-                    string shapeType=parts[0];
+                    string[] parts = line.Split(',');
+                    string shapeType = parts[0];
                     Point startPoint = new Point(int.Parse(parts[1]), int.Parse(parts[2]));
-                    Size dimensions=new Size(int.Parse(parts[3]),int.Parse(parts[4]));
+                    Size dimensions = new Size(int.Parse(parts[3]), int.Parse(parts[4]));
                     Color shapeColor = Color.FromArgb(int.Parse(parts[5]));
 
                     Shape? shape = shapeType switch
@@ -44,7 +43,7 @@ namespace DrawApplication.Classes
                         _ => null
                     };
 
-                    if (shape != null ) shapes.Add(shape);         //listeye ekle
+                    if (shape != null) shapes.Add(shape);                       //listeye ekle
                 }
             }
             return shapes;

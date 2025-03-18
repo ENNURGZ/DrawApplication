@@ -477,6 +477,9 @@ namespace DrawApplication
             {
                 drawingManager.GetShapes().Clear();
                 drawingManager.GetShapes().AddRange(FileManager.OpenFile(openFileDialog.FileName));
+
+                drawingManager.DeselectAllShapes();
+                ResetButtonStyles();
                 panelDrawing.Invalidate();
             }
         }
