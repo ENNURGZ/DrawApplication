@@ -94,7 +94,7 @@ namespace DrawApplication
             {
                 drawingManager.DeselectAllShapes();                         // Önce tüm şekillerin seçili durumunu kaldır
                 drawingManager.SelectShape(e.Location);                     // Eğer tıklanan yerde bir şekil varsa onu seç
-                RefreshButtonStyles();                         // Butonları belirginleştir
+                RefreshButtonStyles();                                      // Butonları belirginleştir
 
                 if (drawingManager.SelectedShapeControl())                  // Seçili bir şekil varsa konum bilgisini göster, yoksa temizle
                 {
